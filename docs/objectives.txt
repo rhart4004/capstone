@@ -1,3 +1,28 @@
-I changed it again!
+Project Objectives
 
-hehe
+Introduction:
+
+
+
+Client Information:
+
+Our client is Professor Darish from the University of Massachusetts Lowell. Prof. Darish is in charge of the 4 of the 5 major electrical engineering labs (Circuits I, Circuits II, Electronics I, and Electronics II).
+
+
+
+Description of Problem: 
+
+The parts room at UMASS Lowell has not been efficient the last couple years and is trying to improve. Right now, there is one or two students that collect forms from professors with the parts they want and they get collected and put in a box. The turn around time for this process can be days which sometimes can just be too long. 
+
+
+
+Project Objectives:
+
+
+
+
+Summary:
+
+
+
+
