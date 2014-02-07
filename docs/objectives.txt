@@ -6,7 +6,7 @@ Introduction:
 
 Client Information:
 
-Our client is Professor Darish from the University of Massachusetts Lowell. Prof. Darish is in charge of the 4 of the 5 major electrical engineering labs (Circuits I, Circuits II, Electronics I, and Electronics II).
+Our client is Professor Darish from the University of Massachusetts Lowell. Prof. Darish is in charge of the 4 of the 5 major electrical engineering labs (Circuits I, Circuits II, Electronics I, and Electronics II). 
 
 
 
@@ -18,7 +18,9 @@ The parts room at UMASS Lowell has not been efficient the last couple years and 
 
 Project Objectives:
 
-1.
+1. Be able to sumbit a parts list to the device
+2. Device will collect the requested parts 
+3. Device will store requested parts for pickup
 
 
 Summary:
