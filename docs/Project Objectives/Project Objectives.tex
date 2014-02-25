@@ -1,0 +1,70 @@
+\documentclass[12pt]{report}
+
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+%\usepackage[style=ieee]{biblatex}
+
+\newcommand{\BibTeX}{{\sc Bib}\TeX}
+
+
+\pagestyle{fancy}
+
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\renewcommand{\footrulewidth}{0 pt}
+
+\begin{document}
+
+
+\noindent Team \#4 \\  \\
+Project \#28: Electronic Parts Picker \\ \\
+Stephen Coombes \\
+Ryan Hart \\
+David Tyler \\ \\
+Capstone Proposal \\ \\
+\today \\ \\ \\ \\ \\
+\centerline{Project Objectives Report}
+\newpage
+
+\section*{Introduction}
+
+This document describes the objectives of the capstone project being done by Team \#4. Our project is an electronic parts picker for Professor Darish of the University of Massachusetts Lowell. Professor Darish is currently running all of the labs and is looking to change up how the labs are run. Professor Darish is looking to have all of the students receive a box of parts at the beginning of the semester with upwards of a couple hundred parts. With the current situation in the parts room, this would be impossible. We started to research how others have built electronic parts pickers in the past and found that there really isn't anything like this. We found a device that would give a specific number of screws and a lego sorting machine. We also found a couple of "robotic hand" ideas that we will look further into. 
+
+
+\section*{Client Background}
+
+The client is Professor Michael Darish of University of Massachusetts Lowell`s Electrical and Computer Engineering department.  Professor Darish orchestrates the four essential ECE laboratory courses, encompassing two hundred students or more each semester.  The laboratory experiments that he utilizes in these courses necessitate parts being supplied, and with the number of students involved, it is a time-consuming process to acquire parts sufficient for all students.  Currently, the stockroom organizes parts by dividing them into sections and looking up the row and column of each part in a specific section. This involves having a human cross-reference the section, row, and column number. Prof. Darish has now expressed interest in being able to provide the students with all parts needed for the entire semester during the first class meeting.  This would prove exceedingly time-consuming and troublesome for the current method to fulfill the order, so there is a use available for an automated parts picker.  
+
+\section*{Problem Statement}
+
+The parts room has selected hours of operation and due to the current set up gathering parts for each class and project takes too long and is too labor intensive. Professor Darish is looking to have all of the students receive a box of parts at the beginning of the semester with upwards of a couple hundred parts. With the current situation in the parts room, this would be impossible. Our project will resolve this situation. 
+
+\section*{Project Objectives}
+
+The goal is to create a programmable system that can pick out the correct parts in the desired quantities, and separate them for distribution in desired configuration.  The goal for our project is do be able to pick up 10 different parts with 100\% accuracy. 
+
+\section*{Research Summary}
+In brief, no evidence can be found of this sort of a system being implemented anywhere else. However, the parts picking robots have been implemented in similar domains successfully so we will explore a couple of those systems. 
+	
+	
+One of the major concerns for this design is how to pick up loose parts from a drawer, and to do so accurately, i.e. picking up a known quantity without error.  The simplest solution appears to be to pick up a single part at a time, and repeat as many times as necessary to obtain further quantities of a part.  A combination of people from Cornell University, University of Chicago, and iRobot created a robotic gripper hand with a balloon of coffee grounds and a vacuum pump \cite{vacumPickTool}.  This gripper was able to deform to any object, and demonstrated the ability to lift 650 grams in a single pull, pour water from a glass, write with a pen, and lift a raw egg.  It was also able to pick up an LED, which would indicate it has the fine control to pick up other electronic parts.  Another way we found this being done was in a screw dispenser robot from Design Tool Inc. Their robot basically vibrates and augers screws and other fasteners from an open bowel into a jig that feeds into a pneumatic delivery system [2]. The system seems to have perfect accuracy based on demonstrations and provides timely, bulk dispensing. The drawback seems to be the power required to run it and the noise it generates from the vibrating bowel and compressed air. It also looks like it has to be reconfigured each time the type of part it is dispensing changes.
+
+
+The closest machine we found to what we want to do was actually a Lego sorting machine made out of Legos. The machine has a vibrating hopper that angles towards a lift that lifts one piece at a time into a channel. The channel then uses a kind of airlock system to separate individual pieces out since they are all in a line [3].
+
+
+We also found a couple sources that discussed how best to pick up electronic parts. One source advocates using a small diameter rubber tube that can be used to pickup parts with suction via a vacuum pump [4]. The idea specifically applied to a human-controlled tool but could possibly be extended for use in an automatic system. This doesn't seem to apply to resistors, but looks like it might be the best way to pickup integrated circuits. Another method was simply using tweezers to pickup the parts [5]. Not sure how applicable this is for our project, but it is something to keep in mind.
+
+\section*{Conclusion}
+
+This document has presented the overall progress for our electronic parts picker for the client, Professor Darish, of Massachusetts Lowell. Professor Darish was looking for a way to give out parts that would allow him to be able to give each student a box full of all the parts they would need for the semester. We are building an electronic parts picker that will allow him to have this become a reality. From our research we are pioneering the idea of an electronic parts picker since we found almost nothing during our research. We only found devices people had built that do part of what we are attempting, either sorting or dispensing, but nothing that was able to do both and non with electronic components. 
+
+\bibliographystyle{plain}
+\bibliography{bib}
+
+\end{document}

@@ -1,0 +1,6 @@
+!/bin/bash
+
+pdflatex research
+bibtex research
+pdflatex research
+pdflatex research
