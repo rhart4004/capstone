@@ -3,15 +3,9 @@
 \usepackage{fullpage}
 \usepackage{fancyhdr}
 \usepackage{url}
-\usepackage{color, colortbl}
-\definecolor{green}{rgb}{0,1,0}
-\usepackage{tabularx,ragged2e,booktabs,caption}
 
 \newcommand{\BibTeX}{{\sc Bib}\TeX}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%				PAGE NUMBERING					       %%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagestyle{fancy}
 
@@ -24,15 +18,8 @@
 \renewcommand{\headrulewidth}{0 pt}
 \renewcommand{\footrulewidth}{0 pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%				START OF DOCUMENT				       %%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%				TITLE PAGE						       %%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent Team \#4 \\  \\
 Project \#28: Electronic Parts Picker \\ \\
@@ -41,13 +28,8 @@ Ryan Hart \\
 David Tyler \\ \\
 Capstone Proposal \\ \\
 \today \\ \\ \\ \\ \\
-\centerline{Requirements and Solution Report}
+\centerline{Research Report}
 \newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%				END TITLE						       %%%%%%
-%%%%%%				START DOCUMENT					       %%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Introduction}
 
@@ -77,235 +59,6 @@ The closest machine we found to what we want to do was actually a Lego sorting m
 
 
 We also found a couple sources that discussed how best to pick up electronic parts. One source advocates using a small diameter rubber tube that can be used to pickup parts with suction via a vacuum pump \cite{vacuumPick}. The idea specifically applied to a human-controlled tool but could possibly be extended for use in an automatic system. This doesn't seem to apply to resistors, but looks like it might be the best way to pickup integrated circuits. Another method was simply using tweezers to pickup the parts. Not sure how applicable this is for our project, but it is something to keep in mind.
-
-\section*{Requirements}
-
-% What the Device WILL Do
-
-\noindent The device shall: \\
-\begin{itemize}
-\item Be able to accurately locate up to 10 different parts
-\item Be able to acquire the correct quantity of parts 100\% of the time
-\item Be able to place the collected parts into container without dropping any parts
-\item Include a user interface which you can specify parts to be collected (no limits accept for container size)
-\item Be able to match or exceed a human`s pace (Speed to be determined)
-\item Include an emergency shut off that kills the system within 1 second
-\item Be able to update an inventory of 10 different parts
-\item Reduce human involvement in the parts room by 40\%
-\end{itemize}
-
-% What the Device WONT Do
-
-\noindent The device shall not: \\
-\begin{itemize}
-\item In any way represent a hazard to persons in the room
-\item Be able to reload the supplies on its own
-\end{itemize}
-
-\section*{Potential Solutions}
-Our final project will be the combination of three separate projects that are combined at the end. The first part of our project is the grabbing mechanism. This will be the device that actually grabs the parts from the storage bins and is responsible for the accuracy of our system. The second part of the project will be the storage of the parts. The third aspect of our project is the control of the two above systems and the software that will allow our system to actually function. This currently doesn't have a metric or ideas since the mechanical design of the system significantly impacts this part of the project.
-\subsection*{Grabber}
-There are several ideas for the grabber device. These include a vacuum grabber, a mechanical grabber, a system similar to the one shown in \cite{legoSorter}, Cornell's balloon hand \cite{universalGrabber}, a conveyer belt system, and one that cuts the parts off of a roll. These systems all have pros and cons which are described below.
-
-\subsubsection*{Vacuum Grabber}
-The vacuum grabber would use a very small head which would pick up components one at a time and store them. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the air pressure would be so small
-\end{itemize}
-Cons
-\begin{itemize}
-\item Picks parts one at a time
-\item May not be able to grab a single part consistently
-\item Pneumatic systems can leak, decreasing the reliability of the system
-\end{itemize}
-
-\subsubsection*{Mechanical Grabber}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsubsection*{Lego System}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsubsection*{Balloon Hand}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsubsection*{Pre-Organized Storage}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsubsection*{Roll Cutter}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsection*{Storage}
-
-\subsubsection*{Wall of Bins}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsubsection*{Spooling Printer Style}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsubsection*{Spinning Columns of Bins}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\subsubsection*{Table of Bins}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
-Pros
-\begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
-\end{itemize}
-Cons
-\begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
-\end{itemize}
-
-\section*{Chosen Solution}
-\subsection*{Grabber}
-
-% Start Metric for Grabber Mechanism
-
-\begin{minipage}{\linewidth}
-\centering
-\captionof{table}{Grabber Mechanism Metric} \label{tab:grabber} 
-\begin{tabular}{|l|l|l|l|l|l|l|l|}
-\hline
- & Accuracy & Safety & Speed & Cost & Autonomy & Reliability & Total \\
- \hline
-Vacuum & 2 & 4 & 2 & 2 & 4 & 3 & 2.7 \\
-Mechanical Grabber & 4 & 4 & 2 & 2 & 4 & 3.5 & 3.35 \\
-\rowcolor{green}
-Lego System & 4.5 & 4 & 4 & 3 & 4 & 3.5 & 3.875 \\
-Balloon Hand & 1 & 5 & 1 & 5 & 4 & 3 & 2.65 \\
-Pre-Organized Storage & 4.5 & 4 & 5 & 0 & 2 & 4 & 3.575 \\
-Roll Cutter & 5 & 4 & 4 & 4 & 4 & 2 & 3.65 \\
-Weights & 0.25 & 0.05 & 0.15 & 0.1 & 0.15 & 0.3 & 1 \\
-\hline
-\end{tabular}\par
-\bigskip
-Should be a caption
-\end{minipage}
-
-% End Metric for Grabber Mechanism
-
-\subsection*{Storage}
-
-% Start Metric for Storage Mechanism
-
-\begin{minipage}{\linewidth}
-\centering
-\captionof{table}{Storage Mechanism Metric} \label{tab:grabber} 
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
- & Size & Cost & Scalability & Reliability & Total \\
- \hline
- \rowcolor{green}
-Wall of Bins & 4 & 4 & 4 & 5 & 4.2 \\
-Spooling Printer Style & 4 & 1 & 4 & 2 & 3.3 \\
-Spinning Column of Bins & 2 & 2 & 1 & 4 & 2 \\
-Table of Bins & 1 & 4 & 3 & 5 & 2.9 \\
-Weights & 0.3 & 0.1 & 0.4 & 0.2 & 1 \\
-\hline
-\end{tabular}\par
-\bigskip
-Should be a caption
-\end{minipage}
-
-% End Metric for Storage Mechanism
-
-
-\section*{Hazard Assessment}
-
-The main hazard is that with the grabber mechanism that was chosen, there will be the system that moves it around to each bin which could potentially hurt someone in the room. We plan to mitigate this hazard by having an emergency stop button mounted near the door so that at anytime a human can stop our device.  
 
 \section*{Conclusion}
 
