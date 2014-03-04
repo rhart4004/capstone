@@ -51,7 +51,7 @@ Capstone Proposal \\ \\
 
 \section*{Introduction}
 
-This document describes the objectives of the capstone project being done by Team \#4. Our project is an electronic parts picker for Professor Darish of the University of Massachusetts Lowell. Professor Darish is currently running all of the labs and is looking to change up how the labs are run. Professor Darish is looking to have all of the students receive a box of parts at the beginning of the semester with upwards of a couple hundred parts. With the current situation in the parts room, this would be impossible. We started to research how others have built electronic parts pickers in the past and found that there really isn't anything like this. We found a device that would give a specific number of screws and a lego sorting machine. We also found a couple of "robotic hand" ideas that we will look further into. 
+This document describes the objectives of the capstone project being done by Team \#4. Our project is an electronic parts picker for Professor Darish of the University of Massachusetts Lowell. Professor Darish is currently running all of the labs and is looking to change up how the labs are run. Professor Darish is looking to have all of the students receive a box of parts at the beginning of the semester with upwards of a couple hundred parts. With the current situation in the parts room, this would be impossible. We started to research how others have built electronic parts pickers in the past and found that there really isn't anything like this. We found a device that would give a specific number of screws and a lego sorting machine. We also found a couple of "robotic hand" ideas that we will look further into. After taking all of these ideas and breaking them down into separate solutions and giving them all pros and cons, they will be run through a metric to decide which would be the best solution. The solution that was decided upon was the Lego Sorter with a Wall of Bins.
 
 
 \section*{Client Background}
@@ -136,121 +136,118 @@ Cons
 \end{itemize}
 
 \subsubsection*{Lego System}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
+The lego sorter show in \cite{legoSorter} would move all the parts in the bin into a line and then have a mechanism that would allow for one to be dispensed at a time once they were organized This grabber would also move on a 3 axis system that would allow it to travel from bin to bin.\\ \\
 Pros
 \begin{itemize}
 \item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item There are no extra safely concerns because it would be a contained unit
+\item Allows for very fast one at a time dispensing
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
+\item Could jam
+\item Could damage part while organizing them into a line
+\item Must organize parts first before sorting
 \end{itemize}
 
 \subsubsection*{Balloon Hand}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
+Cornell's Ballon hand would allow us to conform to the shape of any part allowing us to pick up items very easily. This grabber would also move on a 3 axis system that would allow it to travel from bin to bin. \\ \\
 Pros
 \begin{itemize}
 \item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item There are no extra safely concerns because the ballon hand is not sharp or could cause damage in anyway
+\item Extremely easy to pick up different shaped parts
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
+\item May not be able to grab a single part consistently or at all
 \item Picks parts one at a time
 \end{itemize}
 
 \subsubsection*{Pre-Organized Storage}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
+The idea of pre-organized storage is that when parts come into the parts room, they are organized so that they are in a nice line and then the grabber would come over and extract the specified amount of parts. This grabber would also move on a 3 axis system that would allow it to travel from bin to bin.\\ \\
 Pros
 \begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item Still one part at a time, but very quickly dispensing.
+\item Less jamming would occur because a human would stock the bins and confirm they were organized correctly
+\item There are no extra safely concerns.
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
+\item Not completely autonomous, requires more intense human interaction by the human to fill the bins
+\item Requires specialized bins for storage
 \end{itemize}
 
 \subsubsection*{Roll Cutter}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
+The roll cutter would cut the roll of parts after every part. This grabber would also move on a 3 axis system that would allow it to travel from bin to bin. \\ \\
 Pros
 \begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item Can be completely autonomous, assuming there are parts in the bin. 
+\item Wouldn't have to deal with the problems of getting 1 part at a time since the parts would be on a roll.
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
+\item The device has a set of sharp sheers which could potentially be dangerous
+\item Could damage part while cutting it off the roll
+\item Cuts one part at a time, but would have reasonable speed. 
+\item Would most likely jam often
 \end{itemize}
 
 \subsection*{Storage}
 
 \subsubsection*{Wall of Bins}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
+The wall of bins would be a wall (or series of walls) that would have bins hanging on it.  \\ \\
 Pros
 \begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item Allows for easy scalability of just adding more walls which wouldn't take up much room horizontally.
+\item Could potentially use off the shelf bins
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
+\item Could be difficult to restock depending on how close walls are together
 \end{itemize}
 
 \subsubsection*{Spooling Printer Style}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
+This would be similar to the design of a printer. There would be a series of rolls of parts that would be hanging on horizontal polls. T\\ \\
 Pros
 \begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item Could potentially store a lot of parts in little area due to the nature of rolls of parts
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
+\item Only works if parts are on a roll
 \end{itemize}
 
 \subsubsection*{Spinning Columns of Bins}
 The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
 Pros
 \begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item Could use current set up with slight modification
+\item Could potentially use off the shelf parts for the whole thing
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
+\item Very space inefficient
+\item Not scalable easily
+\item To implement off the shelf solutions would need to open drawer, which could prove difficult.
 \end{itemize}
 
 \subsubsection*{Table of Bins}
-The mechanical grabber would be a pair of finger that would grab components. It would use an optical check to make sure that there was only one part held. The grabber would move on a 3 axis system similar to that of a 3-D printer. \\ \\
+The table of bins would be a table (or stack of horizontal surfaces) that would have bins hanging on it.  \\ \\
 Pros
 \begin{itemize}
-\item Can be completely autonomous, assuming there are parts in the bin
-\item There are no extra safely concerns because the squeezing power of the grabber would be minimal
+\item Allows for easy scalability of just adding more levels of the table which wouldn't take up much room vertically.
+\item Could potentially use off the shelf bins
 \end{itemize}
 Cons
 \begin{itemize}
-\item May not be able to grab a single part consistently
-\item Could damage part while picking it up
-\item Picks parts one at a time
+\item Could be difficult to restock depending on how big the tables are and how close they are together
 \end{itemize}
 
 \section*{Chosen Solution}
 \subsection*{Grabber}
+
+For the grabber portion of the project, we decided to go with the Lego System. After running all of our designs through the metric you see below, it had the highest score and seemed to meet all of our requirements well.
 
 % Start Metric for Grabber Mechanism
 
@@ -270,14 +267,14 @@ Pre-Organized Storage & 4.5 & 4 & 5 & 0 & 2 & 4 & 3.575 \\
 Roll Cutter & 5 & 4 & 4 & 4 & 4 & 2 & 3.65 \\
 Weights & 0.25 & 0.05 & 0.15 & 0.1 & 0.15 & 0.3 & 1 \\
 \hline
-\end{tabular}\par
-\bigskip
-Should be a caption
+\end{tabular}
 \end{minipage}
 
 % End Metric for Grabber Mechanism
 
 \subsection*{Storage}
+
+For the storage portion of the project, we decided to go with the Wall of Bins. After running all of our designs through the metric you see below, it had the highest score and seemed to meet all of our requirements well.
 
 % Start Metric for Storage Mechanism
 
@@ -295,9 +292,7 @@ Spinning Column of Bins & 2 & 2 & 1 & 4 & 2 \\
 Table of Bins & 1 & 4 & 3 & 5 & 2.9 \\
 Weights & 0.3 & 0.1 & 0.4 & 0.2 & 1 \\
 \hline
-\end{tabular}\par
-\bigskip
-Should be a caption
+\end{tabular}
 \end{minipage}
 
 % End Metric for Storage Mechanism
@@ -309,7 +304,7 @@ The main hazard is that with the grabber mechanism that was chosen, there will b
 
 \section*{Conclusion}
 
-This document has presented the overall progress for our electronic parts picker for the client, Professor Darish, of Massachusetts Lowell. Professor Darish was looking for a way to give out parts that would allow him to be able to give each student a box full of all the parts they would need for the semester. We are building an electronic parts picker that will allow him to have this become a reality. From our research we are pioneering the idea of an electronic parts picker since we found almost nothing during our research. We only found devices people had built that do part of what we are attempting, either sorting or dispensing, but nothing that was able to do both and non with electronic components. 
+This document has presented the overall progress for our electronic parts picker for the client, Professor Darish, of Massachusetts Lowell. Professor Darish was looking for a way to give out parts that would allow him to be able to give each student a box full of all the parts they would need for the semester. We are building an electronic parts picker that will allow him to have  this become a reality. From our research we are pioneering the idea of an electronic parts picker since we found almost nothing during our research. We only found devices people had built that do part of what we are attempting, either sorting or dispensing, but nothing that was able to do both and non with electronic components. After taking all of these ideas and our own and breaking them down into separate solutions and giving them all pros and cons, they were run through a metric to decide which would be the best solution. The solution that was decided upon was the Lego Sorter with a Wall of Bins.
 
 \bibliographystyle{ieeetr}
 \bibliography{bib}

@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: research.aux
+The top-level auxiliary file: reqSolution.aux
 The style file: ieeetr.bst
 Database file #1: bib.bib
 Warning--entry type for "universalGrabber" isn't style-file defined
@@ -13,7 +13,7 @@ Warning--entry type for "vacuumPick" isn't style-file defined
 --line 25 of file bib.bib
 You've used 4 entries,
             1876 wiz_defined-function locations,
-            498 strings with 4086 characters,
+            498 strings with 4092 characters,
 and the built_in function-call counts, 530 in all, are:
 = -- 44
 > -- 16
