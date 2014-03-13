@@ -4,4 +4,7 @@ Ryan Hart, David Tyler and Steven Coombes have teamed up to build the best capst
 
 Fun story we are switching projects.
 
+We are now doing something completely different but more electronic :)
+
+
 All Rights Reserved, 2014, Team Cheese, Gromit, Cheese!
