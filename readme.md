@@ -1,4 +1,4 @@
-# Capstone Proposal
+# Capstone Proposal Document
 
 Ryan Hart, David Tyler and Steven Coombes have teamed up to build the best capstone there has ever been in the form of an Automated Parts Picker System.
 
