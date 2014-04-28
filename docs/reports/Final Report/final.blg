@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: final.aux
+The style file: ieeetr.bst
+Database file #1: bib.bib
+Warning--entry type for "1" isn't style-file defined
+--line 1 of file bib.bib
+Warning--string name "april" is undefined
+--line 3 of file bib.bib
+Warning--entry type for "2" isn't style-file defined
+--line 8 of file bib.bib
+Warning--string name "april" is undefined
+--line 10 of file bib.bib
+Warning--entry type for "3" isn't style-file defined
+--line 15 of file bib.bib
+Warning--string name "april" is undefined
+--line 17 of file bib.bib
+You've used 3 entries,
+            1876 wiz_defined-function locations,
+            484 strings with 3699 characters,
+and the built_in function-call counts, 337 in all, are:
+= -- 30
+> -- 3
+< -- 0
++ -- 3
+- -- 0
+* -- 14
+:= -- 41
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 12
+empty$ -- 55
+format.name$ -- 0
+if$ -- 91
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 0
+newline$ -- 12
+num.names$ -- 0
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 4
+write$ -- 23
+(There were 6 warnings)
