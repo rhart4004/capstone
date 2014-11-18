@@ -1,0 +1,40 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[s S1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1 . b1 b2 b3 b4 b5 ]
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;Flags.h: 13: typedef struct {
+[; ;Flags.h: 14: char b1 : 1;
+[; ;Flags.h: 15: char b2 : 1;
+[; ;Flags.h: 16: char b3 : 1;
+[; ;Flags.h: 17: char b4 : 1;
+[; ;Flags.h: 18: char b5 : 1;
+[; ;Flags.h: 19: } t_flags;
+"21 Flags.h
+[v _flags `S1 ~T0 @X0 1 e ]
+[; ;Flags.h: 21: t_flags flags;
+[; ;Flags.h: 23: void clear_flags();
+"3 Flags.c
+[v _clear_flags `(v ~T0 @X0 1 ef ]
+{
+[; ;Flags.c: 3: void clear_flags() {
+[e :U _clear_flags ]
+[f ]
+[; ;Flags.c: 4: flags.b1 = 0;
+"4
+[e = . _flags 0 -> -> 0 `i `uc ]
+[; ;Flags.c: 5: flags.b2 = 0;
+"5
+[e = . _flags 1 -> -> 0 `i `uc ]
+[; ;Flags.c: 6: flags.b3 = 0;
+"6
+[e = . _flags 2 -> -> 0 `i `uc ]
+[; ;Flags.c: 7: flags.b4 = 0;
+"7
+[e = . _flags 3 -> -> 0 `i `uc ]
+[; ;Flags.c: 8: flags.b5 = 0;
+"8
+[e = . _flags 4 -> -> 0 `i `uc ]
+[; ;Flags.c: 9: }
+"9
+[e :UE 2 ]
+}

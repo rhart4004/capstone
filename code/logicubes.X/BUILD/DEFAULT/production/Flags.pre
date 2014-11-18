@@ -1,0 +1,27 @@
+
+# 1 "Flags.c"
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.11\include\stdbool.h"
+typedef unsigned char bool;
+
+# 13 "Flags.h"
+typedef struct {
+char b1 : 1;
+char b2 : 1;
+char b3 : 1;
+char b4 : 1;
+char b5 : 1;
+} t_flags;
+
+t_flags flags;
+
+void clear_flags();
+
+# 3 "Flags.c"
+void clear_flags() {
+flags.b1 = 0;
+flags.b2 = 0;
+flags.b3 = 0;
+flags.b4 = 0;
+flags.b5 = 0;
+}

@@ -1,0 +1,21 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;GUI.h: 4: void * fit_to_screen(void * full_gui, int scroll_index);
+[; ;GUI.h: 5: void * build_gui(void * puzzle_data);
+[; ;GUI.h: 6: void scrolldown(int scroll_index);
+[; ;GUI.h: 7: void scrollup(int scroll_index);
+[; ;GUI.h: 8: int print_screen(void * screen_data);
+[; ;GUI.h: 9: int advance_outputs(void * puzzle);
+"3 GUI.c
+[v _build_gui `(*v ~T0 @X0 1 ef1`*v ]
+{
+[; ;GUI.c: 3: void * build_gui(void * puzzle_data) {
+[e :U _build_gui ]
+[v _puzzle_data `*v ~T0 @X0 1 r1 ]
+[f ]
+[; ;GUI.c: 4: return;
+"4
+[e $UE 1  ]
+[; ;GUI.c: 5: }
+"5
+[e :UE 1 ]
+}

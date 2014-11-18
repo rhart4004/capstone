@@ -1,0 +1,76 @@
+
+# 1 "Buttons.c"
+
+# 11 "Buttons.h"
+struct buttonStruct {
+char b1;
+char b2;
+char b3;
+char b4;
+char b5;
+};
+
+void init_buttons(struct buttonStruct* buttons);
+void update_buttons(struct buttonStruct* buttons);
+int reset_buttons(struct buttonStruct* buttons);
+bit get_b1(struct buttonStruct* buttons);
+bit get_b2(struct buttonStruct* buttons);
+bit get_b3(struct buttonStruct* buttons);
+bit get_b4(struct buttonStruct* buttons);
+bit get_b5(struct buttonStruct* buttons);
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.11\include\stdbool.h"
+typedef unsigned char bool;
+
+# 13 "Flags.h"
+typedef struct {
+char b1 : 1;
+char b2 : 1;
+char b3 : 1;
+char b4 : 1;
+char b5 : 1;
+} t_flags;
+
+t_flags flags;
+
+void clear_flags();
+
+# 4 "Buttons.c"
+void init_buttons(struct buttonStruct* buttons) {
+buttons->b1 = 0;
+buttons->b2 = 0;
+buttons->b3 = 0;
+buttons->b4 = 0;
+buttons->b5 = 0;
+
+return;
+}
+void update_buttons(struct buttonStruct* buttons) {
+buttons->b1 = flags.b1;
+buttons->b2 = flags.b2;
+buttons->b3 = flags.b3;
+buttons->b4 = flags.b4;
+buttons->b5 = flags.b5;
+
+return;
+}
+int reset_buttons(struct buttonStruct* buttons) {
+init_buttons(buttons);
+
+return 0;
+}
+bit get_b1(struct buttonStruct* buttons) {
+return buttons->b1;
+}
+bit get_b2(struct buttonStruct* buttons) {
+return buttons->b2;
+}
+bit get_b3(struct buttonStruct* buttons) {
+return buttons->b3;
+}
+bit get_b4(struct buttonStruct* buttons) {
+return buttons->b4;
+}
+bit get_b5(struct buttonStruct* buttons) {
+return buttons->b5;
+}

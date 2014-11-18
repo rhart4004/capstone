@@ -1,0 +1,241 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[s S3 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S3 . b1 b2 b3 b4 b5 ]
+[s S1 `uc -> 16 `i `uc -> 16 `i `uc 1 ]
+[n S1 puzzleStruct outputDef inputDef curState ]
+[s S2 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S2 buttonStruct b1 b2 b3 b4 b5 ]
+[; ;Puzzle.h: 9: struct puzzleStruct {
+[; ;Puzzle.h: 10: unsigned char outputDef[16];
+[; ;Puzzle.h: 11: unsigned char inputDef[16];
+[; ;Puzzle.h: 12: unsigned char curState;
+[; ;Puzzle.h: 13: };
+[; ;Puzzle.h: 15: void init_puzzle(struct puzzleStruct* puzzle);
+[; ;Puzzle.h: 16: void update_puzzle(struct puzzleStruct* puzzle, struct buttonStruct* buttons);
+[; ;Puzzle.h: 17: int get_state(struct puzzleStruct* puzzle, unsigned char *output, unsigned char *input);
+[; ;Puzzle.h: 18: int advance_state(struct puzzleStruct* puzzle);
+[; ;Puzzle.h: 19: int reset_state(struct puzzleStruct* puzzle);
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;Flags.h: 13: typedef struct {
+[; ;Flags.h: 14: char b1 : 1;
+[; ;Flags.h: 15: char b2 : 1;
+[; ;Flags.h: 16: char b3 : 1;
+[; ;Flags.h: 17: char b4 : 1;
+[; ;Flags.h: 18: char b5 : 1;
+[; ;Flags.h: 19: } t_flags;
+"21 Flags.h
+[v _flags `S3 ~T0 @X0 1 e ]
+[; ;Flags.h: 21: t_flags flags;
+[; ;Flags.h: 23: void clear_flags();
+[; ;Buttons.h: 11: struct buttonStruct {
+[; ;Buttons.h: 12: char b1;
+[; ;Buttons.h: 13: char b2;
+[; ;Buttons.h: 14: char b3;
+[; ;Buttons.h: 15: char b4;
+[; ;Buttons.h: 16: char b5;
+[; ;Buttons.h: 17: };
+[; ;Buttons.h: 19: void init_buttons(struct buttonStruct* buttons);
+[; ;Buttons.h: 20: void update_buttons(struct buttonStruct* buttons);
+[; ;Buttons.h: 21: int reset_buttons(struct buttonStruct* buttons);
+[; ;Buttons.h: 22: bit get_b1(struct buttonStruct* buttons);
+[; ;Buttons.h: 23: bit get_b2(struct buttonStruct* buttons);
+[; ;Buttons.h: 24: bit get_b3(struct buttonStruct* buttons);
+[; ;Buttons.h: 25: bit get_b4(struct buttonStruct* buttons);
+[; ;Buttons.h: 26: bit get_b5(struct buttonStruct* buttons);
+"5 Puzzle.c
+[v _init_puzzle `(v ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Puzzle.c: 5: void init_puzzle(struct puzzleStruct* puzzle) {
+[e :U _init_puzzle ]
+[v _puzzle `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Puzzle.c: 7: puzzle->outputDef[0] = 0b0000;
+"7
+[e = *U + &U . *U _puzzle 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 8: puzzle->outputDef[1] = 0b0001;
+"8
+[e = *U + &U . *U _puzzle 0 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 9: puzzle->outputDef[2] = 0b0010;
+"9
+[e = *U + &U . *U _puzzle 0 * -> -> -> 2 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 2 `i `uc ]
+[; ;Puzzle.c: 10: puzzle->outputDef[3] = 0b0011;
+"10
+[e = *U + &U . *U _puzzle 0 * -> -> -> 3 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 3 `i `uc ]
+[; ;Puzzle.c: 11: puzzle->outputDef[4] = 0b0100;
+"11
+[e = *U + &U . *U _puzzle 0 * -> -> -> 4 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 4 `i `uc ]
+[; ;Puzzle.c: 12: puzzle->outputDef[5] = 0b0101;
+"12
+[e = *U + &U . *U _puzzle 0 * -> -> -> 5 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 5 `i `uc ]
+[; ;Puzzle.c: 13: puzzle->outputDef[6] = 0b0110;
+"13
+[e = *U + &U . *U _puzzle 0 * -> -> -> 6 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 6 `i `uc ]
+[; ;Puzzle.c: 14: puzzle->outputDef[7] = 0b0111;
+"14
+[e = *U + &U . *U _puzzle 0 * -> -> -> 7 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 7 `i `uc ]
+[; ;Puzzle.c: 15: puzzle->outputDef[8] = 0b1000;
+"15
+[e = *U + &U . *U _puzzle 0 * -> -> -> 8 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 8 `i `uc ]
+[; ;Puzzle.c: 16: puzzle->outputDef[9] = 0b1001;
+"16
+[e = *U + &U . *U _puzzle 0 * -> -> -> 9 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 9 `i `uc ]
+[; ;Puzzle.c: 17: puzzle->outputDef[10] = 0b1010;
+"17
+[e = *U + &U . *U _puzzle 0 * -> -> -> 10 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 10 `i `uc ]
+[; ;Puzzle.c: 18: puzzle->outputDef[11] = 0b1011;
+"18
+[e = *U + &U . *U _puzzle 0 * -> -> -> 11 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 11 `i `uc ]
+[; ;Puzzle.c: 19: puzzle->outputDef[12] = 0b1100;
+"19
+[e = *U + &U . *U _puzzle 0 * -> -> -> 12 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 12 `i `uc ]
+[; ;Puzzle.c: 20: puzzle->outputDef[13] = 0b1101;
+"20
+[e = *U + &U . *U _puzzle 0 * -> -> -> 13 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 13 `i `uc ]
+[; ;Puzzle.c: 21: puzzle->outputDef[14] = 0b1110;
+"21
+[e = *U + &U . *U _puzzle 0 * -> -> -> 14 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 14 `i `uc ]
+[; ;Puzzle.c: 22: puzzle->outputDef[15] = 0b1111;
+"22
+[e = *U + &U . *U _puzzle 0 * -> -> -> 15 `i `ui `ux -> -> # *U &U . *U _puzzle 0 `ui `ux -> -> 15 `i `uc ]
+[; ;Puzzle.c: 24: puzzle->inputDef[0] = 0b00;
+"24
+[e = *U + &U . *U _puzzle 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 25: puzzle->inputDef[1] = 0b01;
+"25
+[e = *U + &U . *U _puzzle 1 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 26: puzzle->inputDef[2] = 0b00;
+"26
+[e = *U + &U . *U _puzzle 1 * -> -> -> 2 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 27: puzzle->inputDef[3] = 0b01;
+"27
+[e = *U + &U . *U _puzzle 1 * -> -> -> 3 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 28: puzzle->inputDef[4] = 0b00;
+"28
+[e = *U + &U . *U _puzzle 1 * -> -> -> 4 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 29: puzzle->inputDef[5] = 0b01;
+"29
+[e = *U + &U . *U _puzzle 1 * -> -> -> 5 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 30: puzzle->inputDef[6] = 0b00;
+"30
+[e = *U + &U . *U _puzzle 1 * -> -> -> 6 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 31: puzzle->inputDef[7] = 0b01;
+"31
+[e = *U + &U . *U _puzzle 1 * -> -> -> 7 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 32: puzzle->inputDef[8] = 0b00;
+"32
+[e = *U + &U . *U _puzzle 1 * -> -> -> 8 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 33: puzzle->inputDef[9] = 0b01;
+"33
+[e = *U + &U . *U _puzzle 1 * -> -> -> 9 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 34: puzzle->inputDef[10] = 0b00;
+"34
+[e = *U + &U . *U _puzzle 1 * -> -> -> 10 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 35: puzzle->inputDef[11] = 0b01;
+"35
+[e = *U + &U . *U _puzzle 1 * -> -> -> 11 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 36: puzzle->inputDef[12] = 0b00;
+"36
+[e = *U + &U . *U _puzzle 1 * -> -> -> 12 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 37: puzzle->inputDef[13] = 0b01;
+"37
+[e = *U + &U . *U _puzzle 1 * -> -> -> 13 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 38: puzzle->inputDef[14] = 0b00;
+"38
+[e = *U + &U . *U _puzzle 1 * -> -> -> 14 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 0 `i `uc ]
+[; ;Puzzle.c: 39: puzzle->inputDef[15] = 0b01;
+"39
+[e = *U + &U . *U _puzzle 1 * -> -> -> 15 `i `ui `ux -> -> # *U &U . *U _puzzle 1 `ui `ux -> -> 1 `i `uc ]
+[; ;Puzzle.c: 40: return;
+"40
+[e $UE 4  ]
+[; ;Puzzle.c: 41: }
+"41
+[e :UE 4 ]
+}
+"42
+[v _advance_state `(i ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Puzzle.c: 42: int advance_state(struct puzzleStruct* puzzle) {
+[e :U _advance_state ]
+[v _puzzle `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Puzzle.c: 43: puzzle->curState++;
+"43
+[e ++ . *U _puzzle 2 -> -> 1 `i `uc ]
+[; ;Puzzle.c: 44: return puzzle->curState;
+"44
+[e ) -> . *U _puzzle 2 `i ]
+[e $UE 5  ]
+[; ;Puzzle.c: 45: }
+"45
+[e :UE 5 ]
+}
+"47
+[v _update_puzzle `(v ~T0 @X0 1 ef2`*S1`*S2 ]
+{
+[; ;Puzzle.c: 47: void update_puzzle(struct puzzleStruct* puzzle, struct buttonStruct* buttons) {
+[e :U _update_puzzle ]
+[v _puzzle `*S1 ~T0 @X0 1 r1 ]
+[v _buttons `*S2 ~T0 @X0 1 r2 ]
+[f ]
+[; ;Puzzle.c: 48: if(buttons->b1)
+"48
+[e $ ! != -> . *U _buttons 0 `i -> -> -> 0 `i `uc `i 7  ]
+[; ;Puzzle.c: 49: {
+"49
+{
+[; ;Puzzle.c: 50: advance_state(puzzle);
+"50
+[e ( _advance_state (1 _puzzle ]
+"51
+}
+[e :U 7 ]
+[; ;Puzzle.c: 51: }
+[; ;Puzzle.c: 52: return;
+"52
+[e $UE 6  ]
+[; ;Puzzle.c: 53: }
+"53
+[e :UE 6 ]
+}
+"55
+[v _get_state `(i ~T0 @X0 1 ef3`*S1`*uc`*uc ]
+{
+[; ;Puzzle.c: 55: int get_state(struct puzzleStruct* puzzle, unsigned char *output, unsigned char *input) {
+[e :U _get_state ]
+[v _puzzle `*S1 ~T0 @X0 1 r1 ]
+[v _output `*uc ~T0 @X0 1 r2 ]
+[v _input `*uc ~T0 @X0 1 r3 ]
+[f ]
+[; ;Puzzle.c: 56: *output = puzzle->outputDef[puzzle->curState];
+"56
+[e = *U _output *U + &U . *U _puzzle 0 * -> . *U _puzzle 2 `ux -> -> # *U &U . *U _puzzle 0 `ui `ux ]
+[; ;Puzzle.c: 57: *input = puzzle->inputDef[puzzle->curState];
+"57
+[e = *U _input *U + &U . *U _puzzle 1 * -> . *U _puzzle 2 `ux -> -> # *U &U . *U _puzzle 1 `ui `ux ]
+[; ;Puzzle.c: 58: return puzzle->curState;
+"58
+[e ) -> . *U _puzzle 2 `i ]
+[e $UE 8  ]
+[; ;Puzzle.c: 59: }
+"59
+[e :UE 8 ]
+}
+"61
+[v _reset_state `(i ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Puzzle.c: 61: int reset_state(struct puzzleStruct* puzzle) {
+[e :U _reset_state ]
+[v _puzzle `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Puzzle.c: 62: puzzle->curState = 0;
+"62
+[e = . *U _puzzle 2 -> -> 0 `i `uc ]
+[; ;Puzzle.c: 63: return 0;
+"63
+[e ) -> 0 `i ]
+[e $UE 9  ]
+[; ;Puzzle.c: 64: }
+"64
+[e :UE 9 ]
+}

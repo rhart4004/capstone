@@ -1,0 +1,15 @@
+_ISR: CODE, 8 0 184
+_build_gui: CODE, 1698 0 2
+_init_inputs: CODE, 1692 0 6
+_advance_state: CODE, 1658 0 18
+_main: CODE, 1002 0 118
+_init_puzzle: CODE, 196 0 512
+__initialization: CODE, 1510 0 66
+_update_puzzle: CODE, 1582 0 36
+_init_buttons: CODE, 1430 0 80
+_setup_int: CODE, 1676 0 16
+_update_buttons: CODE, 1334 0 96
+_set_output: CODE, 1120 0 114
+_check_result: CODE, 708 0 294
+_get_state: CODE, 1234 0 100
+Total: 1642

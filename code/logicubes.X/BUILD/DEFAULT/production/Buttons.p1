@@ -1,0 +1,183 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2 . b1 b2 b3 b4 b5 ]
+[s S1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1 buttonStruct b1 b2 b3 b4 b5 ]
+[; ;Buttons.h: 11: struct buttonStruct {
+[; ;Buttons.h: 12: char b1;
+[; ;Buttons.h: 13: char b2;
+[; ;Buttons.h: 14: char b3;
+[; ;Buttons.h: 15: char b4;
+[; ;Buttons.h: 16: char b5;
+[; ;Buttons.h: 17: };
+[; ;Buttons.h: 19: void init_buttons(struct buttonStruct* buttons);
+[; ;Buttons.h: 20: void update_buttons(struct buttonStruct* buttons);
+[; ;Buttons.h: 21: int reset_buttons(struct buttonStruct* buttons);
+[; ;Buttons.h: 22: bit get_b1(struct buttonStruct* buttons);
+[; ;Buttons.h: 23: bit get_b2(struct buttonStruct* buttons);
+[; ;Buttons.h: 24: bit get_b3(struct buttonStruct* buttons);
+[; ;Buttons.h: 25: bit get_b4(struct buttonStruct* buttons);
+[; ;Buttons.h: 26: bit get_b5(struct buttonStruct* buttons);
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;Flags.h: 13: typedef struct {
+[; ;Flags.h: 14: char b1 : 1;
+[; ;Flags.h: 15: char b2 : 1;
+[; ;Flags.h: 16: char b3 : 1;
+[; ;Flags.h: 17: char b4 : 1;
+[; ;Flags.h: 18: char b5 : 1;
+[; ;Flags.h: 19: } t_flags;
+"21 Flags.h
+[v _flags `S2 ~T0 @X0 1 e ]
+[; ;Flags.h: 21: t_flags flags;
+[; ;Flags.h: 23: void clear_flags();
+"4 Buttons.c
+[v _init_buttons `(v ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 4: void init_buttons(struct buttonStruct* buttons) {
+[e :U _init_buttons ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 5: buttons->b1 = 0;
+"5
+[e = . *U _buttons 0 -> -> 0 `i `uc ]
+[; ;Buttons.c: 6: buttons->b2 = 0;
+"6
+[e = . *U _buttons 1 -> -> 0 `i `uc ]
+[; ;Buttons.c: 7: buttons->b3 = 0;
+"7
+[e = . *U _buttons 2 -> -> 0 `i `uc ]
+[; ;Buttons.c: 8: buttons->b4 = 0;
+"8
+[e = . *U _buttons 3 -> -> 0 `i `uc ]
+[; ;Buttons.c: 9: buttons->b5 = 0;
+"9
+[e = . *U _buttons 4 -> -> 0 `i `uc ]
+[; ;Buttons.c: 11: return;
+"11
+[e $UE 3  ]
+[; ;Buttons.c: 12: }
+"12
+[e :UE 3 ]
+}
+"13
+[v _update_buttons `(v ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 13: void update_buttons(struct buttonStruct* buttons) {
+[e :U _update_buttons ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 14: buttons->b1 = flags.b1;
+"14
+[e = . *U _buttons 0 . _flags 0 ]
+[; ;Buttons.c: 15: buttons->b2 = flags.b2;
+"15
+[e = . *U _buttons 1 . _flags 1 ]
+[; ;Buttons.c: 16: buttons->b3 = flags.b3;
+"16
+[e = . *U _buttons 2 . _flags 2 ]
+[; ;Buttons.c: 17: buttons->b4 = flags.b4;
+"17
+[e = . *U _buttons 3 . _flags 3 ]
+[; ;Buttons.c: 18: buttons->b5 = flags.b5;
+"18
+[e = . *U _buttons 4 . _flags 4 ]
+[; ;Buttons.c: 20: return;
+"20
+[e $UE 4  ]
+[; ;Buttons.c: 21: }
+"21
+[e :UE 4 ]
+}
+"22
+[v _reset_buttons `(i ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 22: int reset_buttons(struct buttonStruct* buttons) {
+[e :U _reset_buttons ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 23: init_buttons(buttons);
+"23
+[e ( _init_buttons (1 _buttons ]
+[; ;Buttons.c: 25: return 0;
+"25
+[e ) -> 0 `i ]
+[e $UE 5  ]
+[; ;Buttons.c: 26: }
+"26
+[e :UE 5 ]
+}
+"27
+[v _get_b1 `(b ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 27: bit get_b1(struct buttonStruct* buttons) {
+[e :U _get_b1 ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 28: return buttons->b1;
+"28
+[e ) -> . *U _buttons 0 `b ]
+[e $UE 6  ]
+[; ;Buttons.c: 29: }
+"29
+[e :UE 6 ]
+}
+"30
+[v _get_b2 `(b ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 30: bit get_b2(struct buttonStruct* buttons) {
+[e :U _get_b2 ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 31: return buttons->b2;
+"31
+[e ) -> . *U _buttons 1 `b ]
+[e $UE 7  ]
+[; ;Buttons.c: 32: }
+"32
+[e :UE 7 ]
+}
+"33
+[v _get_b3 `(b ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 33: bit get_b3(struct buttonStruct* buttons) {
+[e :U _get_b3 ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 34: return buttons->b3;
+"34
+[e ) -> . *U _buttons 2 `b ]
+[e $UE 8  ]
+[; ;Buttons.c: 35: }
+"35
+[e :UE 8 ]
+}
+"36
+[v _get_b4 `(b ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 36: bit get_b4(struct buttonStruct* buttons) {
+[e :U _get_b4 ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 37: return buttons->b4;
+"37
+[e ) -> . *U _buttons 3 `b ]
+[e $UE 9  ]
+[; ;Buttons.c: 38: }
+"38
+[e :UE 9 ]
+}
+"39
+[v _get_b5 `(b ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Buttons.c: 39: bit get_b5(struct buttonStruct* buttons) {
+[e :U _get_b5 ]
+[v _buttons `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Buttons.c: 40: return buttons->b5;
+"40
+[e ) -> . *U _buttons 4 `b ]
+[e $UE 10  ]
+[; ;Buttons.c: 41: }
+"41
+[e :UE 10 ]
+}

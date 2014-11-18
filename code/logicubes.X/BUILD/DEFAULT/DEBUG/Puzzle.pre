@@ -1,0 +1,24 @@
+
+# 1 "Puzzle.c"
+
+# 9 "Puzzle.h"
+struct puzzleStruct {
+unsigned char outputDef[16];
+unsigned char inputDef[16];
+unsigned char curState;
+};
+
+void init_puzzle(struct puzzleStruct* puzzle);
+void update_puzzle(struct puzzleStruct* puzzle);
+int get_state(struct puzzleStruct* puzzle, unsigned char *output, unsigned char *input);
+int advance_state(struct puzzleStruct* puzzle);
+int reset_state(struct puzzleStruct* puzzle);
+
+# 2 "Puzzle.c"
+void init_puzzle(struct puzzleStruct* puzzle) {
+return;
+}
+int advance_state(struct puzzleStruct* puzzle) {
+return 1;
+}
+

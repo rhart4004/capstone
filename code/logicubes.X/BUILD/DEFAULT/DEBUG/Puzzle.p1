@@ -1,0 +1,42 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[s S1 `uc -> 16 `i `uc -> 16 `i `uc 1 ]
+[n S1 puzzleStruct outputDef inputDef curState ]
+[; ;Puzzle.h: 9: struct puzzleStruct {
+[; ;Puzzle.h: 10: unsigned char outputDef[16];
+[; ;Puzzle.h: 11: unsigned char inputDef[16];
+[; ;Puzzle.h: 12: unsigned char curState;
+[; ;Puzzle.h: 13: };
+[; ;Puzzle.h: 15: void init_puzzle(struct puzzleStruct* puzzle);
+[; ;Puzzle.h: 16: void update_puzzle(struct puzzleStruct* puzzle);
+[; ;Puzzle.h: 17: int get_state(struct puzzleStruct* puzzle, unsigned char *output, unsigned char *input);
+[; ;Puzzle.h: 18: int advance_state(struct puzzleStruct* puzzle);
+[; ;Puzzle.h: 19: int reset_state(struct puzzleStruct* puzzle);
+"2 Puzzle.c
+[v _init_puzzle `(v ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Puzzle.c: 2: void init_puzzle(struct puzzleStruct* puzzle) {
+[e :U _init_puzzle ]
+[v _puzzle `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Puzzle.c: 3: return;
+"3
+[e $UE 2  ]
+[; ;Puzzle.c: 4: }
+"4
+[e :UE 2 ]
+}
+"5
+[v _advance_state `(i ~T0 @X0 1 ef1`*S1 ]
+{
+[; ;Puzzle.c: 5: int advance_state(struct puzzleStruct* puzzle) {
+[e :U _advance_state ]
+[v _puzzle `*S1 ~T0 @X0 1 r1 ]
+[f ]
+[; ;Puzzle.c: 6: return 1;
+"6
+[e ) -> 1 `i ]
+[e $UE 3  ]
+[; ;Puzzle.c: 7: }
+"7
+[e :UE 3 ]
+}
